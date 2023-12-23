@@ -2,7 +2,6 @@
   description = "My NixOS/Darwin/Flakes/Home Manager configuration for everything!";
 
   inputs = {
-    # Principle inputs (updated by `nix run .#update`)
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nix-darwin.url = "github:lnl7/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
