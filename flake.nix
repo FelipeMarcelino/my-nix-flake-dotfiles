@@ -1,8 +1,9 @@
 {
 
-  description = "My NixOS/Darwin/Flakes/Home Manager configuration for everything!"
+  description = "My NixOS/Darwin/Flakes/Home Manager configuration for everything!";
 
   inputs = {
+
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nix-darwin.url = "github:lnl7/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
