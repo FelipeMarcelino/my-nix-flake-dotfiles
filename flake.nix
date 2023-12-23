@@ -1,5 +1,4 @@
 {
-
   description = "My NixOS/Darwin/Flakes/Home Manager configuration for everything!";
 
   inputs = {
