@@ -13,6 +13,7 @@
 	hwinfo
 	busybox
 	p7zip
+	pavucontrol
    ];
 
    programs.htop = {
@@ -28,6 +29,8 @@
    programs.git.userEmail = "felipe.marcelino1991@gmail.com";
    programs.git.userName = "Felipe Marcelino";
 
+   # Pulseaudio
+   services.pasystray.enable = true;
 
 }
 
