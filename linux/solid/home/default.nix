@@ -32,6 +32,9 @@
    # Pulseaudio
    services.pasystray.enable = true;
 
+   # Home Folders
+   home.file."Downloads".source = "${config.home.homeDirectory}/downloads";
+
 }
 
 
