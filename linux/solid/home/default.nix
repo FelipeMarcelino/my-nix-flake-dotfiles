@@ -32,10 +32,6 @@
    # Pulseaudio
    services.pasystray.enable = true;
    
-   # Autorandr
-   programs.autorandr.enable = true;
-   services.autorandr.enable = true;
-
 }
 
 
