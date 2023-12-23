@@ -31,7 +31,7 @@
 
    # Pulseaudio
    services.pasystray.enable = true;
-
+   
 }
 
 
