@@ -14,6 +14,8 @@
 	busybox
 	p7zip
 	pavucontrol
+        obexfs
+	obexftp
    ];
 
    programs.htop = {
