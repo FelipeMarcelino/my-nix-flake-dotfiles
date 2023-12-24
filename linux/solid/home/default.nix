@@ -28,7 +28,7 @@
 
    # Misc
    programs.feh.enable = true;
-   programs.blueman-applet.enable = true;
+   services.blueman-applet.enable = true;
    services.flameshot.enable = true;
 
 
