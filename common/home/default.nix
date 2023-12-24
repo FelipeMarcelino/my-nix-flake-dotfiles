@@ -13,6 +13,7 @@
 	fasd
 	spotify
 	unrar
+	unzip
    ];
 
    programs.nix-index.enable = true;
