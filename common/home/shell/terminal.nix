@@ -28,7 +28,8 @@ config.skip_close_confirmation_for_processes_named = {
 }
 config.window_close_confirmation = "NeverPrompt"
 config.keys = {
-  { key = 'f', mods = 'ALT|CTRL', action = wezterm.action.QuickSelect },
+  { key = 'f', mods = 'ALT|CTRL', action = wezterm.action.QuickSelect},
+  { key = 'f', mods = 'ALT|SHIFT', action = wezterm.action.Search {CaseInSensitiveString=""}},
 }
 
 
