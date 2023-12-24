@@ -5,7 +5,6 @@
    programs.fzf.enableZshIntegration = true;
    programs.nix-index.enableZshIntegration = true;
    programs.skim.enableZshIntegration = true;
-   programs.wezterm.enableZshIntegration = true;
    programs.zoxide.enableZshIntegration = true;
    programs.starship.enableZshIntegration = true;
    programs.direnv.enableZshIntegration = true;
