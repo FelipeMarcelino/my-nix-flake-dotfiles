@@ -11,7 +11,6 @@
    
    home.packages = with pkgs; [
 	hwinfo
-	busybox
 	p7zip
 	pavucontrol
    ];
