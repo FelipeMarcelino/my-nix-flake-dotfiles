@@ -23,6 +23,13 @@
 	docs = "$HOME/Documents";
 	vids = "$HOME/Videos";
 	dl = "$HOME/Downloads";
+	pics = "$HOME/Pictures";
+	dev = "$HOME/Development";
+	mus = "$HOME/Music";
+	dot = "$HOME/Development/nix-dotfiles";
    };
+   programs.zsh.history.extended = true;
+   programs.zsh.oh-my-zsh.plugins = [ "sudo" "git" "vi-mode" "scala" "sbt" "ripgrep" 
+	"python" "colored-man-pages" "cp" "aliases" "alias-finder" "common-aliases" ];
 
 }
