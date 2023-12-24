@@ -17,7 +17,14 @@ config.audible_bell = "Disabled"
 config.automatically_reload_config = true
 config.default_cursor_style = "BlinkingBlock"
 config.animation_fps = 20
-
+config.hide_tab_bar_if_only_one_tab = true
+config.show_new_tab_button_in_tab_bar = false
+config.show_tabs_in_tab_bar = false
+config.skip_close_confirmation_for_processes_named = {
+   "zsh",
+   "bash",
+   "nvim",
+}
 
 return config
 	'';
