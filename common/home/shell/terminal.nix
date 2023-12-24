@@ -27,6 +27,10 @@ config.skip_close_confirmation_for_processes_named = {
    "nvim",
 }
 config.window_close_confirmation = "NeverPrompt"
+config.keys = {
+  { key = 'f', mods = 'ALT|CTRL', action = wezterm.action.QuickSelect },
+}
+
 
 return config
 	'';
