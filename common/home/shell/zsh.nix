@@ -29,7 +29,15 @@
 	dot = "$HOME/Development/nix-dotfiles";
    };
    programs.zsh.history.extended = true;
+   #programs.zsh.historySubstringSearch.searchDownKey
    programs.zsh.oh-my-zsh.plugins = [ "sudo" "git" "vi-mode" "scala" "sbt" "ripgrep" 
 	"python" "colored-man-pages" "cp" "aliases" "alias-finder" "common-aliases" ];
 
+   programs.zsh.prezto.enable = true;
+   programs.zsh.prezto.editor.dotExpansion = true;
+   programs.zsh.prezto.editor.promptContext = true;
+   programs.zsh.prezto.editor.keymap = "vi";
+   programs.zsh.initExtra = ''
+bindkey '^ ' autosuggest-accept
+   '';
 }
