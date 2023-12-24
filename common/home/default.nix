@@ -4,7 +4,7 @@
 
    imports = [
 	./shell/default.nix
-	./devel/default.nix
+	./development/default.nix
    ];
 
    home.packages = with pkgs; [
