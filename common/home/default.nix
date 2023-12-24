@@ -9,6 +9,10 @@
 
    home.packages = with pkgs; [
 	firefox
+	zoom-us
+	fasd
+	spotify
+	unrar
    ];
 
    programs.nix-index.enable = true;
@@ -16,6 +20,7 @@
    programs.skim.enable = true;
    programs.fzf.enable = true;
    programs.ripgrep.enable = true;
+   programs.zathura.enable = true;
 
    services.gpg-agent = {
 	enable = true;
