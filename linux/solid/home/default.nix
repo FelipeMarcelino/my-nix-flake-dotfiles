@@ -13,6 +13,12 @@
 	hwinfo
 	p7zip
 	pavucontrol
+	ranger
+	discord
+	tdesktop
+	ffmpegthumbnailer	
+	gparted
+	youtube-dl
    ];
 
    programs.htop = {
@@ -22,7 +28,9 @@
 
    # Misc
    programs.feh.enable = true;
+   programs.blueman-applet.enable = true;
    services.flameshot.enable = true;
+
 
    # Git
    programs.git.userEmail = "felipe.marcelino1991@gmail.com";
