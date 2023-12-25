@@ -44,8 +44,6 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "us";
-    xkbVariant = "intl";
     enable = true;
     displayManager.defaultSession = "none+i3";
     desktopManager.xterm.enable = false;

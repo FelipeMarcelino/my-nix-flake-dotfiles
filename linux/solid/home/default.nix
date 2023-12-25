@@ -26,6 +26,15 @@
 	package = pkgs.htop-vim;
    };
 
+   # Enable GTK
+   gtk.enable = true;
+
+   # Keyboard Layout
+   home.keyboard = {
+    layout = "us";
+    variant = "intl";
+   };
+
    # C cedilla
    home.file.".Xcompose".text = ''
 include "%L"
@@ -37,8 +46,6 @@ include "%L"
        GTK_IM_MODULE = "xim";
        QT_IM_MODULE = "xim";
    };
-
-
 
    # Misc
    programs.feh.enable = true;
