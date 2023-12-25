@@ -14,6 +14,7 @@
 	spotify
 	unrar
 	unzip
+	celluloid
    ];
 
    programs.nix-index.enable = true;
