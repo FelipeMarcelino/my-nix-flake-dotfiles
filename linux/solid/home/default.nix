@@ -26,11 +26,26 @@
 	package = pkgs.htop-vim;
    };
 
+   # Enable GTK
+   gtk.enable = true;
+
+   # Keyboard Layout
+   home.keyboard = {
+    layout = "us";
+    variant = "intl";
+    };
+
+   # C cedilla
+   home.file.".XCompose".text = ''
+include "%L"
+<dead_acute> <C>            : "Ç" Ccedilla  # LATIN CAPITAL LETTER C WITH CEDILLA
+<dead_acute> <c>            : "ç" ccedilla  # LATIN SMALL LETTER C WITH CEDILLA
+'';
+
    # Misc
    programs.feh.enable = true;
    services.blueman-applet.enable = true;
    services.flameshot.enable = true;
-
 
    # Git
    programs.git.userEmail = "felipe.marcelino1991@gmail.com";
