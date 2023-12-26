@@ -42,7 +42,7 @@
     LC_TIME = "pt_BR.UTF-8";
   };
 
-  # Configure keymap in X11
+  # Xserverb
   services.xserver = {
     enable = true;
     displayManager.defaultSession = "none+i3";
@@ -51,6 +51,9 @@
     displayManager.gdm.enable = true;
     windowManager.i3.enable = true;
   };
+
+  # Input
+  i18n.inputMethod.enabled = "ibus";
 
   # Configure console keymap
   console.keyMap = "us-acentos";

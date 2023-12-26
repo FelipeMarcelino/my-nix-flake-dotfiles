@@ -33,26 +33,24 @@
    home.keyboard = {
     layout = "us";
     variant = "intl";
-    #variant = "altgr-intl";
-    options = ["compose:ralt"];
-   };
+    };
 
    # C cedilla
-   home.file.".Xcompose".text = ''
+   home.file.".XCompose".text = ''
 include "%L"
-#  Overridig C with acute:
-<Multi_key> <dead_acute> <C>            : "Ç" Ccedilla  # LATIN CAPITAL LETTER C WITH CEDILLA
-<Multi_key> <dead_acute> <c>            : "ç" ccedilla  # LATIN SMALL LETTER C WITH CEDILLA
-   '';
-   #home.sessionVariables = {
-       #GTK_IM_MODULE = "cedilla";
-       #QT_IM_MODULE = "cedilla";
-   #};
+<dead_acute> <C>            : "Ç" Ccedilla  # LATIN CAPITAL LETTER C WITH CEDILLA
+<dead_acute> <c>            : "ç" ccedilla  # LATIN SMALL LETTER C WITH CEDILLA
+'';
 
    home.sessionVariables = {
-       GTK_IM_MODULE = "xim";
-       QT_IM_MODULE = "xim";
+       GTK_IM_MODULE = "cedilla";
+       QT_IM_MODULE = "cedilla";
    };
+
+   #home.sessionVariables = {
+   #    GTK_IM_MODULE = "xim";
+   #    QT_IM_MODULE = "xim";
+   #};
 
 
    # Misc
