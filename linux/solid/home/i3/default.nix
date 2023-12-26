@@ -10,6 +10,19 @@ in {
 	config = {
 	   modifier = mod;
 	   terminal = "wezterm";
+	   workspaceOutputAssign = [
+	     { output = ["DP-0"]; workspace = "1:code"; }
+	     { output = ["HDMI-0"]; workspace = "2:code"; }
+	     { output = ["DP-0"]; workspace = "3:zet"; }
+	     { output = ["HDMI-0"]; workspace = "4:web"; }
+	     { output = ["DP-0"]; workspace = "5:app"; }
+	     { output = ["HDMI-0"]; workspace = "6:reader"; }
+	     { output = ["DP-0"]; workspace = "7:kanban"; }
+	     { output = ["HDMI-0"]; workspace = "8:player"; }
+	     { output = ["DP-0"]; workspace = "9:misc"; }
+	     { output = ["HDMI-0"]; workspace = "10:social"; }
+	   ];
+
 	   workspaceAutoBackAndForth = true;   
 	   keybindings = {
 	    "${mod}+h" = "focus left";
@@ -69,16 +82,17 @@ in {
 	};
 	};
 	extraConfig = ''
-	    set $ws1 "1";
-	    set $ws2 "2";
-	    set $ws3 "3";
-	    set $ws4 "4";
-	    set $ws5 "5";
-	    set $ws6 "6";
-	    set $ws7 "7";
-	    set $ws8 "8";
-	    set $ws9 "9";
-	    set $ws10 "10"
+	    set $ws1 "1:code";
+	    set $ws2 "2:code";
+	    set $ws3 "3:zet";
+	    set $ws4 "4:web";
+	    set $ws5 "5:app";
+	    set $ws6 "6:reader";
+	    set $ws7 "7:kanban";
+	    set $ws8 "8:player";
+	    set $ws9 "9:misc";
+	    set $ws10 "10:social"
 	'';
+
     };
 }
