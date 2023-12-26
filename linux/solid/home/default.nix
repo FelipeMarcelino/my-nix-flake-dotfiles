@@ -7,6 +7,7 @@
 	./i3/default.nix
 	./rofi/default.nix
 	./xrandr/default.nix
+	./dunst/default.nix
    ];
    
    home.packages = with pkgs; [
