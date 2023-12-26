@@ -54,6 +54,8 @@
 
   # Input
   i18n.inputMethod.enabled = "ibus";
+  i18n.inputMethod.ibus.engines = with pkgs.ibus-engines; [ table table-others ];
+  services.xserver.desktopManager.runXdgAutostartIfNone = true;
 
   # Configure console keymap
   console.keyMap = "us-acentos";

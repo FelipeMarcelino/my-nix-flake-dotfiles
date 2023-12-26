@@ -42,22 +42,10 @@ include "%L"
 <dead_acute> <c>            : "ç" ccedilla  # LATIN SMALL LETTER C WITH CEDILLA
 '';
 
-   home.sessionVariables = {
-       GTK_IM_MODULE = "cedilla";
-       QT_IM_MODULE = "cedilla";
-   };
-
-   #home.sessionVariables = {
-   #    GTK_IM_MODULE = "xim";
-   #    QT_IM_MODULE = "xim";
-   #};
-
-
    # Misc
    programs.feh.enable = true;
    services.blueman-applet.enable = true;
    services.flameshot.enable = true;
-
 
    # Git
    programs.git.userEmail = "felipe.marcelino1991@gmail.com";
