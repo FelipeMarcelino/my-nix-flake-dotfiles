@@ -18,8 +18,8 @@ in {
 	     { output = ["DP-0"]; workspace = "5:app"; }
 	     { output = ["HDMI-0"]; workspace = "6:reader"; }
 	     { output = ["DP-0"]; workspace = "7:kanban"; }
-	     { output = ["HDMI-0"]; workspace = "8:misc"; }
-	     { output = ["DP-0"]; workspace = "9:player"; }
+	     { output = ["HDMI-0"]; workspace = "8:misc"; } # Possible chatgpt? 
+	     { output = ["DP-0"]; workspace = "9:player"; } 
 	     { output = ["HDMI-0"]; workspace = "10:social"; }
 	   ];
 
@@ -41,7 +41,7 @@ in {
 		[
 		    { class = "^Zathura$";}
 		];
-		"8:player" =
+		"9:player" =
 		[
 		    { class = "^Spotify$";}
 		    { class = "^io.github.celluloid_player.Celluloid$";}
