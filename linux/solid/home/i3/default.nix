@@ -35,7 +35,7 @@ in {
             "${mod}+e" = "layout toggle split";
             "${mod}+Shift+space" = "floating toggle";
             "${mod}+space" = "focus mode_toggle";
-            "${mod}+Shift+e" = "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'";
+            "${mod}+Shift+e" = "exec i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'";
  	    "${mod}+1" =  "workspace number $ws1";
  	    "${mod}+2" =  "workspace number $ws2";
  	    "${mod}+3" =  "workspace number $ws3";

@@ -42,10 +42,8 @@
     LC_TIME = "pt_BR.UTF-8";
   };
 
-  # Configure keymap in X11
+  # Xserverb
   services.xserver = {
-    layout = "us";
-    xkbVariant = "intl";
     enable = true;
     displayManager.defaultSession = "none+i3";
     desktopManager.xterm.enable = false;
@@ -53,6 +51,11 @@
     displayManager.gdm.enable = true;
     windowManager.i3.enable = true;
   };
+
+  # Input
+  i18n.inputMethod.enabled = "ibus";
+  i18n.inputMethod.ibus.engines = with pkgs.ibus-engines; [ table table-others ];
+  services.xserver.desktopManager.runXdgAutostartIfNone = true;
 
   # Configure console keymap
   console.keyMap = "us-acentos";
@@ -78,6 +81,8 @@
     xclip
     vim 
     wget
+    xorg.xmodmap
+    xorg.xev
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
