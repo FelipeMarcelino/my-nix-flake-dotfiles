@@ -31,7 +31,7 @@
    programs.zsh.historySubstringSearch.searchDownKey = [ ];
    programs.zsh.historySubstringSearch.searchUpKey = [ ];
    programs.zsh.oh-my-zsh.plugins = [ "sudo" "git" "vi-mode" "scala" "sbt" "ripgrep" 
-	"python" "colored-man-pages" "cp" "aliases" "alias-finder" "common-aliases" ];
+	"python" "colored-man-pages" "cp" "aliases" "alias-finder" "common-aliases" "fasd" ];
 
    programs.zsh.initExtra = ''
 bindkey '^ ' autosuggest-accept
