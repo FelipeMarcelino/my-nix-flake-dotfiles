@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/bash#
+## -*- coding: utf-8 -*-
 
 
 # Function to send notification
@@ -11,7 +12,7 @@ if [ "$muted" = "[MUTED]" ]; then
 else
     result=$(echo "$volume * $mult" | bc)
     result=${result%.*}
-    bar=$(seq -s "─" $result | sed 's/[0-9]//g')
+    bar=$(seq -s "■" "$result" | sed 's/[0-9]//g')
     dunstify -i audio-volume-muted-blocking -t 8000 -r 2593 -u normal "    $bar" # Change Icon
 fi
 

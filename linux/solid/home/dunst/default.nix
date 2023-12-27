@@ -1,8 +1,12 @@
 { config, pkgs, ...}:
 {
 
-   imports = [
-   	./volNotify.nix
+   home.packages = with pkgs; [
+   	(pkgs.writeShellApplication {
+		name = "VolNotify";
+		runtimeInputs = [ bc glib ];
+		text = builtins.readFile ./volNotify.sh;}
+	)
    ];
 
    services.dunst = {
