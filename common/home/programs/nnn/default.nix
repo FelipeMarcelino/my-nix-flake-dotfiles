@@ -1,4 +1,4 @@
-{ config, pkgs, nnn}:
+{ config, pkgs, ...}:
 {
    programs.nnn.enable = true;
 }
