@@ -20,6 +20,9 @@
 	ffmpegthumbnailer	
 	gparted
 	youtube-dl
+	xbindkeys 
+	xdotool
+	bc
    ];
 
    programs.htop = {
@@ -34,6 +37,7 @@
    home.keyboard = {
     layout = "us";
     variant = "intl";
+    model = "hhk";
     };
 
    # C cedilla

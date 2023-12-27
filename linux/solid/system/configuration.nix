@@ -42,7 +42,7 @@
     LC_TIME = "pt_BR.UTF-8";
   };
 
-  # Xserverb
+  # Xserver
   services.xserver = {
     enable = true;
     displayManager.defaultSession = "none+i3";
@@ -93,6 +93,10 @@
   };
 
   # List services that you want to enable:
+
+  # Media Keys
+  sound.mediaKeys.volumeStep = "5%";
+  sound.mediaKeys.enable = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;

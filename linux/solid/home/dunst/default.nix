@@ -1,5 +1,10 @@
 { config, pkgs, ...}:
 {
+
+   imports = [
+   	./volNotify.nix
+   ];
+
    services.dunst = {
        enable = true;
        settings = {
