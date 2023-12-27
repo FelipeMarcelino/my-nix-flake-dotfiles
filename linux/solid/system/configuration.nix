@@ -94,10 +94,6 @@
 
   # List services that you want to enable:
 
-  # Media Keys
-  sound.mediaKeys.volumeStep = "5%";
-  sound.mediaKeys.enable = true;
-
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
   programs.ssh.startAgent = true;

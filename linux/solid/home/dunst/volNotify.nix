@@ -1,6 +1,7 @@
-{ pkgs, writeShellApplication, ...}: 
+{config, pkgs, ...}:
 
-writeShellApplication {
-   name = "volNotify";
-   text = builtins.readFile ./volNotify.sh;
-}
+(pkgs.writeShellApplication {
+	name = "NotifyVol";
+	runtimeInputs = [ pkgs.bc ];
+	text = builtins.readFile ./volNotify.sh;
+})
