@@ -34,6 +34,7 @@
    home.keyboard = {
     layout = "us";
     variant = "intl";
+    model = "hhk";
     };
 
    # C cedilla

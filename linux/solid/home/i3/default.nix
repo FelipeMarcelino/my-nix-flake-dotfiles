@@ -101,6 +101,10 @@ in {
 	    "${mod}+Shift+8" = "move container to workspace number 8:player";
 	    "${mod}+Shift+9" = "move container to workspace number 9:misc";
 	    "${mod}+Shift+0" = "move container to workspace number 10:social";
+	    "${mod}+Control+k" = "exec --no-startup-id wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+; exec --no-startup-id NotifyVol up";
+	    "${mod}+Control+j" = " exec --no-startup-id wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-; exec --no-startup-id NotifyVol down";
+	    "${mod}+Control+space" = "exec --no-startup-id wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; exec --no-startup-id NotifyVol mute";
+	    "${mod}+Control+h" = "exec --no-startup-id wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
 	   };
 	window = {
 	   titlebar = false;
