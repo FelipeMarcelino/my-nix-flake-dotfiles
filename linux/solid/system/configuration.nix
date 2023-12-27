@@ -42,7 +42,7 @@
     LC_TIME = "pt_BR.UTF-8";
   };
 
-  # Xserverb
+  # Xserver
   services.xserver = {
     enable = true;
     displayManager.defaultSession = "none+i3";
