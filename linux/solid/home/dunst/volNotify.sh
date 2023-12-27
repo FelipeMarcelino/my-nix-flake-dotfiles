@@ -1,6 +1,5 @@
-#!/bin/bash#
 ## -*- coding: utf-8 -*-
-
+set +o pipefail
 
 # Function to send notification
 volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -d ':' -f 2 | tr -d ' ' )

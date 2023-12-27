@@ -20,9 +20,6 @@
 	ffmpegthumbnailer	
 	gparted
 	youtube-dl
-	xbindkeys 
-	xdotool
-	bc
    ];
 
    programs.htop = {

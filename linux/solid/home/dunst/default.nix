@@ -3,8 +3,8 @@
 
    home.packages = with pkgs; [
    	(pkgs.writeShellApplication {
-		name = "VolNotify";
-		runtimeInputs = [ bc glib ];
+		name = "NotifyVol";
+		runtimeInputs = [ bc ];
 		text = builtins.readFile ./volNotify.sh;}
 	)
    ];
