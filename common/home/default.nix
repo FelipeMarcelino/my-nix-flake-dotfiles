@@ -15,6 +15,7 @@
 	unrar
 	unzip
 	celluloid
+	python3
    ];
 
    programs.nix-index.enable = true;
