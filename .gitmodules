@@ -1,0 +1,3 @@
+[submodule "linux/solid/home/mpv/inspiration_repos/mpv-settings"]
+	path = linux/solid/home/mpv/inspiration_repos/mpv-settings
+	url = git@github.com:Tsubajashi/mpv-settings.git
