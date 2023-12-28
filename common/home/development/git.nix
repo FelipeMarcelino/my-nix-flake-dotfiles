@@ -22,7 +22,7 @@
 		side-by-side = true;
 		line-numbers = true;
 		hyperlinks = true;
-		hyperlinks-file-link-format = "file-line://{path}:{line}"
+		hyperlinks-file-link-format = "file-line://{path}:{line}";
 	   };
 	   merge = {
 	   	conflictstyle = "diff3";
