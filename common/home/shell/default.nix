@@ -5,6 +5,7 @@
 	./startship.nix
 	./terminal.nix
 	./zsh.nix
+	./bat.nix
     ];
 
     home.packages = with pkgs; [
