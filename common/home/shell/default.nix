@@ -7,6 +7,7 @@
 	./zsh.nix
 	./bat.nix
 	./eza.nix
+	./delta.nix
     ];
 
     home.packages = with pkgs; [
