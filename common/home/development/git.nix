@@ -1,12 +1,8 @@
 { config, pkgs, ...}:
 {
    programs.git = {
-   	delta.enable = true
    	enable = true;
-	options = {
-	   core = {
-		pager = "delta";
-	   };
+	extraConfig = {
 	   user = {
 		user = "felipe.marcelino1991@gmail.com";
 		signingkey = "9AA9415FA1237FD0";
@@ -20,20 +16,28 @@
 	   tag = {
 	   	gpgsign = true;
 	   };
-	   interactive = {
-	   	diffFilter = "delta --color-only";
-	   };
 	   delta = {
 	   	navigate = true;
 		light = false;
+		side-by-side = true;
+		line-numbers = true;
+		hyperlinks = true;
+		hyperlinks-file-link-format = "file-line://{path}:{line}"
 	   };
 	   merge = {
 	   	conflictstyle = "diff3";
 	   };
 	   diff = {
 	   	colorMoved = "default";
-	   }
+	   };
 	   
+	};
+
+	delta = { 
+	   enable = true;
+	   options = {
+		
+	   };
 	};
    };
 }
