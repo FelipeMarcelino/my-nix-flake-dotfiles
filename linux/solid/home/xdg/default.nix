@@ -1,7 +1,4 @@
 { config, pkgs, ...}:
-let 
-   augmentedOpen = (import ./augmented-open.nix {inherit config pkgs;})
-in
 {
    xdg.mimeApps.enable = true;
    xdg.userDirs = {
@@ -10,8 +7,8 @@ in
 	};
    };
 
-   xdg.desktopEntries = 
-   {
-	augmentedOpen
-   };
+   # Entries
+   imports = [
+	./augmented-open.nix
+   ];
 }
