@@ -9,9 +9,12 @@
 	"--group-directories-first"
 	"--smart-group"
 	"--header"
+	"--git-repos"
 	"--total-size"
 	"--git"
 	"--header"
-	"--hyperlink"];
+	"--hyperlink"
+	"--tree"
+	];
    };
 }
