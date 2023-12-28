@@ -15,7 +15,6 @@
 	unrar
 	unzip
 	celluloid
-	exa
    ];
 
    programs.nix-index.enable = true;
