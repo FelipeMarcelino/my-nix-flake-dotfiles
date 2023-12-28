@@ -1,7 +1,6 @@
 { config, pkgs, ...}:
 {
-   xdg.enable = true;
-   xdg.userDirs.enable = true;
-   xdg.userDirs.createDirectorires = true;
+   imports = [
+	./xdg.nix
+   ];
 }
-
