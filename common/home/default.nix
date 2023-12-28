@@ -16,11 +16,10 @@
 	unrar
 	unzip
 	celluloid
-	python3
+	xdg-utils
    ];
 
    programs.nix-index.enable = true;
-   programs.git.enable = true;
    programs.skim.enable = true;
    programs.fzf.enable = true;
    programs.ripgrep.enable = true;
@@ -39,6 +38,11 @@
     };
 
     fonts.fontconfig.enable = true;
+
+    home.sessionVariables = {
+    	MANPAGER="sh -c 'col -bx | bat -l man -p'";
+    };
+
 }
 
 

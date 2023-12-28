@@ -21,6 +21,7 @@
 	ffmpegthumbnailer	
 	gparted
 	youtube-dl
+	python3
    ];
 
    programs.htop = {
