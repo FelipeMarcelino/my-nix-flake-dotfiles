@@ -88,8 +88,8 @@ in {
  	    "${mod}+5" =  "workspace number 5:app";
  	    "${mod}+6" =  "workspace number 6:reader";
  	    "${mod}+7" =  "workspace number 7:kanban";
- 	    "${mod}+8" =  "workspace number 8:player";
- 	    "${mod}+9" =  "workspace number 9:misc";
+ 	    "${mod}+8" =  "workspace number 8:misc";
+ 	    "${mod}+9" =  "workspace number 9:player";
 	    "${mod}+0" =  "workspace number 10:social";
 	    "${mod}+Shift+1" = "move container to workspace number 1:code";
        	    "${mod}+Shift+2" = "move container to workspace number 2:code";
@@ -98,8 +98,8 @@ in {
 	    "${mod}+Shift+5" = "move container to workspace number 5:app";
 	    "${mod}+Shift+6" = "move container to workspace number 6:reader";
 	    "${mod}+Shift+7" = "move container to workspace number 7:kanban";
-	    "${mod}+Shift+8" = "move container to workspace number 8:player";
-	    "${mod}+Shift+9" = "move container to workspace number 9:misc";
+	    "${mod}+Shift+8" = "move container to workspace number 8:misc";
+	    "${mod}+Shift+9" = "move container to workspace number 9:player";
 	    "${mod}+Shift+0" = "move container to workspace number 10:social";
 	    "${mod}+Control+k" = "exec --no-startup-id wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+; exec --no-startup-id NotifyVol up";
 	    "${mod}+Control+j" = " exec --no-startup-id wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-; exec --no-startup-id NotifyVol down";
