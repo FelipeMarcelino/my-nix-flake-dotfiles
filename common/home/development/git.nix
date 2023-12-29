@@ -23,6 +23,7 @@
 		line-numbers = true;
 		hyperlinks = true;
 		hyperlinks-file-link-format = "file-line://{path}:{line}";
+		true-color = "always";
 	   };
 	   merge = {
 	   	conflictstyle = "diff3";
@@ -35,9 +36,6 @@
 
 	delta = { 
 	   enable = true;
-	   options = {
-		
-	   };
 	};
    };
 }
