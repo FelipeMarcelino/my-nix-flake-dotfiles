@@ -27,6 +27,7 @@
 	glances
 	hyperfine
 	procs
+	curlie
    ];
 
    programs.nix-index.enable = true;
