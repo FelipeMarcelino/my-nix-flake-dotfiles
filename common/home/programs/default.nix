@@ -3,5 +3,6 @@
    imports = [
 	./xdg.nix
 	./ripgrep.nix
+	./fzf.nix
    ];
 }
