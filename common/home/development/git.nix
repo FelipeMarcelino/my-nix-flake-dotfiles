@@ -7,6 +7,9 @@
 		user = "felipe.marcelino1991@gmail.com";
 		signingkey = "9AA9415FA1237FD0";
 	   };
+	   push = {
+	   	autoSetupRemote = true;
+	   };
 	   init = {
 	   	defaultBranch = "main";
 	   };
