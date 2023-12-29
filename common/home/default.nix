@@ -33,7 +33,6 @@
    programs.nix-index.enable = true;
    programs.skim.enable = true;
    programs.fzf.enable = true;
-   programs.ripgrep.enable = true;
    programs.zathura.enable = true;
    programs.jq.enable = true;
 
