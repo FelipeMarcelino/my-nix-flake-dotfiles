@@ -53,7 +53,7 @@
     home.sessionVariables = {
     	MANPAGER="sh -c 'col -bx | bat -l man -p'";
 	FORGIT_FZF_DEFAULT_OPTS="--exact --border --cycle --reverse --height '80%'";
-	FORGIT_CHECKOUT_BRANCH_BRANCH_GIT_OPTS='--sort=-committerdate'
+	FORGIT_CHECKOUT_BRANCH_BRANCH_GIT_OPTS="--sort=-committerdate";
     };
 
 }
