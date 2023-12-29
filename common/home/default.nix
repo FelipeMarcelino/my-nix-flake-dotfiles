@@ -52,7 +52,6 @@
 
     home.sessionVariables = {
     	MANPAGER="sh -c 'col -bx | bat -l man -p'";
-	RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/ripgreprc";
     };
 
 }
