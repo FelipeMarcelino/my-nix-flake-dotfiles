@@ -17,6 +17,7 @@
 	unzip
 	celluloid
 	xdg-utils
+	dust
    ];
 
    programs.nix-index.enable = true;
