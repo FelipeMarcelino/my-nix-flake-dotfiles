@@ -6,5 +6,5 @@
 	./fzf.nix
    ];
 
-   xdg.file."${config.xdg.configHome}/cheat/cheat.yaml".source = ../../cheat.yaml
+   home.file."${config.xdg.configHome}/cheat/cheat.yaml".source = ./cheat.yaml;
 }
