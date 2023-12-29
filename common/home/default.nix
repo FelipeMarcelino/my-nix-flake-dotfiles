@@ -29,7 +29,6 @@
 	procs
 	curlie
 	tree
-	zsh-forgit
    ];
 
    programs.nix-index.enable = true;

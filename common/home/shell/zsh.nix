@@ -30,9 +30,13 @@
    programs.zsh.history.extended = true;
    programs.zsh.historySubstringSearch.searchDownKey = [ ];
    programs.zsh.historySubstringSearch.searchUpKey = [ ];
-   programs.zsh.oh-my-zsh.plugins = [ "sudo" "git" "vi-mode" "scala" "sbt" "ripgrep" 
+   programs.zsh.oh-my-zsh.plugins = [ "sudo" "vi-mode" "scala" "sbt" "ripgrep" 
 	"python" "colored-man-pages" "cp" "aliases" "alias-finder" "common-aliases" "fasd" ];
 
+   programs.zsh.plugins = 
+   [  
+	{name = "forgit";    src = pkgs.fetchFromGitHub {      owner = "wfxr";      repo = "forgit";      rev = "v23.09.0";      sha256 = "";    };} 
+   ];
    programs.zsh.initExtra = ''
 bindkey '^ ' autosuggest-accept
 zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
