@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-find * | fzf --prompt 'All> ' \
+
+fd --glob '*' --type d  | fzf --prompt '>Directories> ' \
              --header 'CTRL-D: Directories / CTRL-F: Files' \
-             --bind 'ctrl-d:change-prompt(Directories> )+reload(find * -type d)' \
-             --bind 'ctrl-f:change-prompt(Files> )+reload(find * -type f)'
+             --bind 'ctrl-d:change-prompt(Directories> )+reload(fd --glob '*' --type d)' \
+             --bind 'ctrl-f:change-prompt(Files> )+reload(fd --glob '*' --type f)'
