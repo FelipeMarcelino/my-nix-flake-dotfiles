@@ -48,6 +48,8 @@ bindkey -M vicmd 'j' history-substring-search-down
   programs.zsh.shellAliases = {
    run = "nix run .#activate";
    cat = "bat --paging=never";
+   du = "dust";
+   df = "duf";
   };
   programs.zsh.localVariables = {
     KEYTIMEOUT = 15;	
