@@ -17,6 +17,17 @@
 	unzip
 	celluloid
 	xdg-utils
+	du-dust
+	duf
+	fd
+	sd
+	choose
+	cheat
+	tldr
+	glances
+	hyperfine
+	procs
+	curlie
    ];
 
    programs.nix-index.enable = true;
@@ -24,6 +35,7 @@
    programs.fzf.enable = true;
    programs.ripgrep.enable = true;
    programs.zathura.enable = true;
+   programs.jq.enable = true;
 
    services.gpg-agent = {
 	enable = true;
