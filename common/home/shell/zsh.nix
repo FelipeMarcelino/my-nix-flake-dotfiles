@@ -31,11 +31,11 @@
    programs.zsh.historySubstringSearch.searchDownKey = [ ];
    programs.zsh.historySubstringSearch.searchUpKey = [ ];
    programs.zsh.oh-my-zsh.plugins = [ "sudo" "vi-mode" "scala" "sbt" "ripgrep" 
-	"python" "colored-man-pages" "cp" "aliases" "alias-finder" "common-aliases" "fasd" ];
+	"python" "colored-man-pages" "cp" "aliases" "alias-finder" "common-aliases" "fasd" "git" ];
 
    programs.zsh.plugins = 
    [  
-	{name = "forgit";    src = pkgs.fetchFromGitHub {      owner = "wfxr";      repo = "forgit";      rev = "v23.09.0";      sha256 = "";    };} 
+	{name = "forgit";    src = pkgs.fetchFromGitHub {      owner = "wfxr";      repo = "forgit";      rev = "23.09.0";      sha256 = "WvJxjEzF3vi+YPVSH3QdDyp3oxNypMoB71TAJ7D8hOQ=";    }; file = "forgit.plugin.zsh"; } 
    ];
    programs.zsh.initExtra = ''
 bindkey '^ ' autosuggest-accept
