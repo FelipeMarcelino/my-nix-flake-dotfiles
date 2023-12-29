@@ -5,6 +5,7 @@
    imports = [
 	./shell/default.nix
 	./development/default.nix
+	./programs/default.nix
    ];
 
    home.packages = with pkgs; [
@@ -15,6 +16,7 @@
 	unrar
 	unzip
 	celluloid
+	xdg-utils
    ];
 
    programs.nix-index.enable = true;
