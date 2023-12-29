@@ -57,6 +57,10 @@ include "%L"
 
    # Pulseaudio
    services.pasystray.enable = true;
+
+   home.sessionVariables = {
+	FORGIT_COPY_CMD="xclip -selection clipboardo";
+   };
    
 }
 
