@@ -104,6 +104,10 @@
   # Nvidia
   services.xserver.videoDrivers = [ "nvidia" ];
 
+  # Terminal info
+  environment.enableAllTerminfo = true;
+  security.sudo.keepTerminfo = true;
+
   # Bluetooth
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;

@@ -7,6 +7,7 @@
 	./zsh.nix
 	./bat.nix
 	./eza.nix
+	./zoxide.nix
     ];
 
     home.packages = with pkgs; [

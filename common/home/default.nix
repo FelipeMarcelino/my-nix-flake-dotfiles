@@ -28,12 +28,11 @@
 	hyperfine
 	procs
 	curlie
+	tree
    ];
 
    programs.nix-index.enable = true;
    programs.skim.enable = true;
-   programs.fzf.enable = true;
-   programs.ripgrep.enable = true;
    programs.zathura.enable = true;
    programs.jq.enable = true;
 
@@ -53,6 +52,9 @@
 
     home.sessionVariables = {
     	MANPAGER="sh -c 'col -bx | bat -l man -p'";
+	FORGIT_FZF_DEFAULT_OPTS="--exact --border --cycle --reverse --height '80%'";
+	FORGIT_CHECKOUT_BRANCH_BRANCH_GIT_OPTS="--sort=-committerdate";
+	CHEAT_USE_FZF="true";
     };
 
 }
