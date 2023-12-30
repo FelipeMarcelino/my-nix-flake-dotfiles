@@ -5,7 +5,6 @@
    programs.fzf.enableZshIntegration = true;
    programs.nix-index.enableZshIntegration = true;
    programs.skim.enableZshIntegration = true;
-   programs.zoxide.enableZshIntegration = true;
    programs.starship.enableZshIntegration = true;
    programs.direnv.enableZshIntegration = true;
    programs.zsh.enableAutosuggestions = true;
@@ -42,7 +41,7 @@ zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
 zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
 zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 run_rfv() {
-   rfv || return
+   rfv 
 }
 zle -N run_rfv
    '';
