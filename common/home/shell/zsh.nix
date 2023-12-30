@@ -41,12 +41,16 @@ zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
 zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
 zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
 zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
+run_rfv() {
+   rfv || return
+}
+zle -N run_rfv
    '';
 
   programs.zsh.loginExtra = ''
-
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
+bindkey '^X' run_rfv
   '';
   programs.zsh.shellAliases = {
    run = "nix run .#activate";
