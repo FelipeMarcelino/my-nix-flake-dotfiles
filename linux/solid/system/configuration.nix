@@ -106,6 +106,7 @@
 
   # Terminal info
   environment.enableAllTerminfo = true;
+  security.sudo.keepTerminfo = true;
 
   # Bluetooth
   hardware.bluetooth.enable = true;
