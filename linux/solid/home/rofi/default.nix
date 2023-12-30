@@ -1,5 +1,8 @@
-{ config, pkgs, ...}:
+{ lib, stdenv, fetchFromGitHub, config, pkgs, ...}:
 
+let 
+   rofi-themes = (import ./rofi-themes {inherit lib stdenv fetchFromGitHub;});
+in
 {
     programs.rofi = {
 	enable = true;
@@ -10,6 +13,7 @@
     # for rofi-emoji
     home.packages = [ 
     	pkgs.xdotool 
-	(import ./rofi-themes.nix)
+	rofi-themes
+
     ];
 }
