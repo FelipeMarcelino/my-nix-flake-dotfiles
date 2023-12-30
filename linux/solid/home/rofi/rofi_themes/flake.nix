@@ -13,17 +13,20 @@
 		sha256 = "sha256-YjyrxappcLDoh3++mtZqCyxQV2qeoNhhUy2XGwlyTng=";
 	   };
 
-	   buildInputs = [ pkgs.bash ];
+	   buildInputs = [ pkgs.bash pkgs.fontconfig ];
+
+	   buildPhase = ''
+	   	export HOME=$(pwd)
+	   '';
 
 	   installPhase = ''
-		mkdir -p $out/bin
-		cp setup.sh $out/bin/setup.sh 
-		cp -rf files $out/bin/files
-		cp -rf fonts $out/bin/fonts
-		cp -rf previews $out/bin/previews
-		bash $out/bin/setup.sh
+	   	mkdir -p $out
+		bash $src/setup.sh 
+		cp -rf $src/* $out/
+		echo '#!/bin/sh' > $out/bin/rofi-themes
+		chmod +x $out/bin/rofi-themes
 	   '';
-    }
+    };
     # Specify the default package
     defaultPackage.x86_64-linux = self.packages.x86_64-linux.rofi-themes; # <- add this
   };

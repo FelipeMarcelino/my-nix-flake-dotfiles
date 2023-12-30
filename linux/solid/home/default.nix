@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ config, pkgs,...}:
 
 {
    xsession.enable = true;
@@ -22,6 +22,7 @@
 	gparted
 	youtube-dl
 	python3
+	rofi-themes
    ];
 
    programs.htop = {
@@ -45,6 +46,10 @@ include "%L"
 <dead_acute> <C>            : "Ç" Ccedilla  # LATIN CAPITAL LETTER C WITH CEDILLA
 <dead_acute> <c>            : "ç" ccedilla  # LATIN SMALL LETTER C WITH CEDILLA
 '';
+
+
+   # Fonts
+   fonts.fontconfig.enable = true;
 
    # Misc
    programs.feh.enable = true;
