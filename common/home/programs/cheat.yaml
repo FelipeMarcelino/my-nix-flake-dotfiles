@@ -1,6 +1,6 @@
 ---
 # The editor to use with 'cheat -e <sheet>'. Defaults to $EDITOR or $VISUAL.
-editor: EDITOR_PATH
+editor: "nvim" 
 
 # Should 'cheat' always colorize output?
 colorize: true
@@ -17,7 +17,7 @@ formatter: terminal16m
 # Through which pager should output be piped?
 # 'less -FRX' is recommended on Unix systems
 # 'more' is recommended on Windows
-pager: PAGER
+pager: "less -FRX"
 
 # Cheatpaths are paths at which cheatsheets are available on your local
 # filesystem.
