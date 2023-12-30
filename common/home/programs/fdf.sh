@@ -1,19 +1,18 @@
-#!/usr/bin/env bash
-
 fzf_cd_or_open() {
-	local file
-	file=$(fd --glob "*" --type d | fzf --prompt '>Directories> ' --header 'CTRL-D: Directories / CTRL-F: Files' --bind 'ctrl-d:change-prompt(Directories> )+reload(fd --glob "*" --type d)' --bind 'ctrl-f:change-prompt(Files> )+reload(fd --glob "*" --type f)')
-      
-	if [[ -n "$file" ]]; then
-	   if [[ -d "$file" ]]; then
-		cd "$file" || return
-	   elif [[ -f "$file" ]]; then
-		${EDITOR} "$file"
-	   fi
-	fi
+    local item
+    item=$(fd --glob "*" | fzf --prompt '> ' \
+        --header 'CTRL-D: Directories / CTRL-F: Files' \
+        --bind 'ctrl-d:change-prompt(Directories> )+reload(fd --glob "*" --type d)' \
+        --bind 'ctrl-f:change-prompt(Files> )+reload(fd --glob "*" --type f)')
+
+    if [[ -n "$item" ]]; then
+        if [[ -d "$item" ]]; then
+            # For directories, use 'builtin cd' to ensure it affects the current shell
+            builtin cd "$item" || return
+        elif [[ -f "$item" ]]; then
+            # Open files with the specified editor
+            ${EDITOR:-nvim} "$item"
+        fi
+    fi
 }
-
-fzf_cd_or_open
-
-
 
