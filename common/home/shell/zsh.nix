@@ -41,11 +41,15 @@ zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
 zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
 zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
 zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
+zle -N fzf_cd_or_open
    '';
 
   programs.zsh.loginExtra = ''
+
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
+unbind '^t' 
+bindkey '^t' fzf_cd_or_open
   '';
   programs.zsh.shellAliases = {
    run = "nix run .#activate";
@@ -56,4 +60,6 @@ bindkey -M vicmd 'j' history-substring-search-down
   programs.zsh.localVariables = {
     KEYTIMEOUT = 15;	
   };
+
+  home.file."../programs/fdf.sh".source = "./scripts/fdf.sh";
 }
