@@ -1,8 +1,5 @@
 { lib, stdenv, fetchFromGitHub, config, pkgs, ...}:
 
-let 
-   rofi-themes = (import ./rofi-themes {inherit lib stdenv fetchFromGitHub;});
-in
 {
     programs.rofi = {
 	enable = true;
