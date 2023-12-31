@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ config, pkgs,...}:
 
 {
    xsession.enable = true;
@@ -46,6 +46,10 @@ include "%L"
 <dead_acute> <c>            : "ç" ccedilla  # LATIN SMALL LETTER C WITH CEDILLA
 '';
 
+
+   # Fonts
+   fonts.fontconfig.enable = true;
+
    # Misc
    programs.feh.enable = true;
    services.blueman-applet.enable = true;
@@ -60,6 +64,7 @@ include "%L"
 
    home.sessionVariables = {
 	FORGIT_COPY_CMD="xclip -selection clipboardo";
+	TERMINAL="wezterm -e --always-new-process";
    };
    
 }
