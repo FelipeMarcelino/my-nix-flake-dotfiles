@@ -62,6 +62,12 @@ include "%L"
    # Pulseaudio
    services.pasystray.enable = true;
 
+   # Xclip Dmenu
+   services.clipmenu.enable = true;
+   services.clipmenu.launcher = "rofi";
+
+
+
    home.sessionVariables = {
 	FORGIT_COPY_CMD="xclip -selection clipboardo";
 	TERMINAL="wezterm -e --always-new-process";
