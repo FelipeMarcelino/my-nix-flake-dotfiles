@@ -2,8 +2,8 @@
 let 
   mod = "Mod1";
 in {
-    programs.i3status.enable = true;
-    programs.i3status-rust.enable = true;
+    programs.i3status.enable = false;
+    programs.i3status-rust.enable = false;
     xsession.windowManager.i3 = {
 	enable = true;
 	package = pkgs.i3-gaps;
