@@ -62,7 +62,7 @@ in {
 	    "${mod}+j" = "focus down";
 	    "${mod}+k" = "focus up";
 	    "${mod}+Return" = "exec --no-startup-id wezterm";
-	    "${mod}+d" = "exec rofi -modi drun -show drun";
+	    "${mod}+d" = "exec rofi -show drun";
 	    "${mod}+comma" = "kill";
 	    "${mod}+Shift+c" = "reload";
 	    "${mod}+Shift+r" = "restart";

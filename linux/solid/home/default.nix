@@ -64,6 +64,7 @@ include "%L"
 
    home.sessionVariables = {
 	FORGIT_COPY_CMD="xclip -selection clipboardo";
+	TERMINAL="wezterm -e --always-new-process";
    };
    
 }
