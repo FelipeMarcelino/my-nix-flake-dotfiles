@@ -23,6 +23,8 @@
 	gparted
 	youtube-dl
 	python3
+	networkmanager_dmenu
+	dmenu
    ];
 
    programs.htop = {
@@ -51,6 +53,9 @@ include "%L"
    # Fonts
    fonts.fontconfig.enable = true;
 
+   # Mpd
+   services.mpd.enable = true;
+
    # Misc
    programs.feh.enable = true;
    services.blueman-applet.enable = true;
@@ -62,6 +67,10 @@ include "%L"
 
    # Pulseaudio
    services.pasystray.enable = true;
+
+   # Clipmenu
+   services.clipmenu.enable = true;
+   services.clipmenu.launcher = "rofi";
 
    home.sessionVariables = {
 	FORGIT_COPY_CMD="xclip -selection clipboardo";

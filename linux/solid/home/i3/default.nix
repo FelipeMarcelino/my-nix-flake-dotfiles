@@ -4,10 +4,13 @@ let
 in {
     programs.i3status.enable = false;
     programs.i3status-rust.enable = false;
+    programs.i3status-rust.bars = {};
     xsession.windowManager.i3 = {
 	enable = true;
 	package = pkgs.i3-gaps;
 	config = {
+
+	   bars = [];
 	   modifier = mod;
 	   terminal = "wezterm";
 	   workspaceOutputAssign = [

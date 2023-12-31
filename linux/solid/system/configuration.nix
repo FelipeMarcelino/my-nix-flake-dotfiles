@@ -55,6 +55,7 @@
     displayManager.lightdm.enable = false;
     displayManager.gdm.enable = true;
     windowManager.i3.enable = true;
+    windowManager.i3.extraPackages = with pkgs; [ i3lock ];
   };
 
   # Input
