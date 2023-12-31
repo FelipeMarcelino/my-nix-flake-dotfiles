@@ -22,7 +22,6 @@
 	gparted
 	youtube-dl
 	python3
-	rofi-themes
    ];
 
    programs.htop = {

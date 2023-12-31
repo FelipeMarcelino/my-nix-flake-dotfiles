@@ -1,17 +1,16 @@
-{ lib, stdenv, fetchFromGitHub, config, pkgs, ...}:
-
+{config, pkgs, ...}:
 {
 
-    imports = [
-	./rofi-themes/flake.nix
-    ];
     programs.rofi = {
 	enable = true;
 	terminal = "wezterm";
+	package = (pkgs.rofi.override { plugins = [ pkgs.rofi-emoji ]; });
+	theme = ./onedark.rasi;
+	
     };
 
-    # for rofi-emoji
     home.packages = [ 
     	pkgs.xdotool 
     ];
+
 }
