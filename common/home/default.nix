@@ -29,6 +29,7 @@
 	procs
 	curlie
 	tree
+	nerdfonts
    ];
 
    programs.nix-index.enable = true;
