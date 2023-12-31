@@ -9,6 +9,7 @@
 	./xrandr/default.nix
 	./dunst/default.nix
 	./xdg/default.nix
+	./polybar/default.nix
    ];
    
    home.packages = with pkgs; [
