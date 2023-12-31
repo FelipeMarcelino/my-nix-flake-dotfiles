@@ -1,5 +1,6 @@
 { lib, pkgs, ...}:
-{
+
+pkgs.stdenv.mkDerivation rec {
    pname = "rofi-themes";
    src = pkgs.fetchFromGitHub {
 	owner = "adi1090x";

@@ -7,8 +7,10 @@
    outputs = inputs@{ self, nixpkgs, flake-parts, ... }: 
     inputs.flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" "aarch64-darwin" "x86_64-darwin" ];
-
-      packages.rofi-themes = flake-parts.packages.rofi-themes;
+      packages = 
+      	{ 
+	  rofi-themes = flake-parts.packages.rofi-themes;
+	};
    };
 }
 
