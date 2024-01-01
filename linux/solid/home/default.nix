@@ -25,6 +25,7 @@
 	python3
 	networkmanager_dmenu
 	dmenu
+	lm_sensors
    ];
 
    programs.htop = {
