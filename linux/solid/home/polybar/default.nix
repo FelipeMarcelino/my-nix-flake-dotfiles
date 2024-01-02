@@ -5,7 +5,6 @@
 	package = pkgs.polybarFull;
 	script = ''
 		# Add this script to your wm startup file.
-		#!/usr/bin/env bash
 
 		DIR=$XDG_POLYBAR/cuts
 

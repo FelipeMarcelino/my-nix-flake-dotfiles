@@ -88,7 +88,7 @@ include "%L"
    services.clipmenu.launcher = "rofi";
 
    home.sessionVariables = {
-	FORGIT_COPY_CMD="xclip -selection clipboardo";
+	FORGIT_COPY_CMD="xclip -selection clipboard";
 	TERMINAL="wezterm -e --always-new-process";
    };
    
