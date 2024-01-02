@@ -10,6 +10,7 @@
 	./dunst/default.nix
 	./xdg/default.nix
 	./polybar/default.nix
+	./mopidy/default.nix
    ];
    
    home.packages = with pkgs; [
@@ -28,6 +29,7 @@
 	dmenu
 	lm_sensors
 	alsa-utils
+	libmpdclient
    ];
 
    programs.htop = {
@@ -56,8 +58,18 @@ include "%L"
    # Fonts
    fonts.fontconfig.enable = true;
 
-   # Mpd
+   # MPD + Spotify + Mpris
    services.mpd.enable = true;
+   services.spotifyd.enable = true;
+   services.spotifyd.package = (
+   	pkgs.spotifyd.override {
+		withPulseAudio = true;
+		withPortAudio = true;
+		withMpris = true;
+		withKeyring = true;
+	}
+   );
+   services.mpdris2.enable = true;
 
    # Misc
    programs.feh.enable = true;
