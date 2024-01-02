@@ -23,9 +23,11 @@
 	gparted
 	youtube-dl
 	python3
+	python311Packages.fontforge
 	networkmanager_dmenu
 	dmenu
 	lm_sensors
+	alsa-utils
    ];
 
    programs.htop = {

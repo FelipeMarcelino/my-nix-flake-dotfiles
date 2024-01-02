@@ -112,12 +112,13 @@ in {
 	window = {
 	   titlebar = false;
 	   hideEdgeBorders = "smart";
+	   border = 4;
 	};
 	gaps = {
 	   smartGaps = true;
 	   smartBorders = "on";
-	   inner = 5;
-	   outer = 5;
+	   inner = 4;
+	   outer = 4;
 	};
 	};
     };
