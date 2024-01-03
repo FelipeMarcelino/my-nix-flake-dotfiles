@@ -9,6 +9,7 @@
 	./xrandr/default.nix
 	./dunst/default.nix
 	./xdg/default.nix
+	./password/default.nix
    ];
    
    home.packages = with pkgs; [
@@ -54,6 +55,11 @@ include "%L"
    programs.feh.enable = true;
    services.blueman-applet.enable = true;
    services.flameshot.enable = true;
+
+   # Keyring/Password Manager
+   services.gnome-keyring.enable = true;
+   programs.rbw.enable = true
+
 
    # Git
    programs.git.userEmail = "felipe.marcelino1991@gmail.com";
