@@ -12,6 +12,7 @@
 	./polybar/default.nix
 	./mopidy/default.nix
 	./password/default.nix
+	./spotifyd/default.nix
    ];
    
    home.packages = with pkgs; [
@@ -59,17 +60,8 @@ include "%L"
    # Fonts
    fonts.fontconfig.enable = true;
 
-   # MPD + Spotify + Mpris
+   # MPD + Mpris
    services.mpd.enable = true;
-   services.spotifyd.enable = true;
-   services.spotifyd.package = (
-   	pkgs.spotifyd.override {
-		withPulseAudio = true;
-		withPortAudio = true;
-		withMpris = true;
-		withKeyring = true;
-	}
-   );
    services.mpdris2.enable = true;
 
    # Misc
