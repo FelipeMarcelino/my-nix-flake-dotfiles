@@ -11,6 +11,7 @@
 	./xdg/default.nix
 	./polybar/default.nix
 	./mopidy/default.nix
+	./password/default.nix
    ];
    
    home.packages = with pkgs; [
