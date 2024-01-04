@@ -1,5 +1,13 @@
 { config, pkgs, ...}:
 {
+
+   services.playerctld.enable = true;
+
+   home.packages = with pkgs; [
+   	zscroll
+	playerctl
+   ];
+    
    services.polybar ={
 	enable = true;
 	package = pkgs.polybarFull;

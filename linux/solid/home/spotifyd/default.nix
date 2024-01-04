@@ -12,9 +12,19 @@
 	}
    );
    services.spotifyd.settings = {
-	username = "$SPOTIFY_USERNAME";
-	password = "$SPOTIFY_PASSWORTD";
-	use_mpris = true;
+   	global = {
+	   username = "felipe.marcelino1991";
+	   password_cmd = "secret-tool lookup service spotify username spotify_password";
+	   use_mpris = true;
+	   dbus_type = "session";
+	   backend = "pulseaudio";
+	   bitrate = 320;
+	   autoplay =true;
+	   device_name = "solid";
+	   initial_volume = "100";
+	   device_type = "computer";
+	   audio-format = "F32";
+	};
    };
 
 }
