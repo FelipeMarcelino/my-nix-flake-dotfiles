@@ -10,6 +10,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixos-flake.url = "github:srid/nixos-flake";
+    polybar-spotify.url = "github:your-username/polybar-spotify";
   };
 
   outputs = inputs@{ self, ... }:
