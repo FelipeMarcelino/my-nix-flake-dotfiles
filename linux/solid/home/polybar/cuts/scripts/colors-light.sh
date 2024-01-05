@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Color files
-PFILE="$XDG_POLYBAR/cuts/colors.ini"
-RFILE="$XDG_POLYBAR/cuts/scripts/rofi/colors.rasi"
+PFILE="/home/felipemarcelino/Development/nix-dotfiles/linux/solid/home/polybar/cuts/colors.ini"
+RFILE="/home/felipemarcelino/Development/nix-dotfiles/linux/solid/home/polybar/cuts/scripts/rofi/colors.rasi"
 
 BG="FFFFFF"
 FG="0A0A0A"

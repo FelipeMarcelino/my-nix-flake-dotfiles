@@ -5,7 +5,7 @@
 ## Github  : @adi1090x
 ## Twitter : @adi1090x
 
-dir="${XDG_POLYBAR}/cuts/scripts/rofi"
+dir="/home/felipemarcelino/Development/nix-dotfiles/linux/solid/home/polybar/cuts/scripts/rofi"
 uptime=$(uptime -p | sed -e 's/up //g')
 
 rofi_command="rofi -no-config -theme $dir/powermenu.rasi"

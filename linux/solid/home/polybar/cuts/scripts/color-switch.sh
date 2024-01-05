@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SDIR="${XDG_POLYBAR}/cuts/scripts"
+SDIR="/home/felipemarcelino/Development/nix-dotfiles/linux/solid/home/polybar/cuts/scripts"
 
 # Launch Rofi
 MENU="$(rofi -no-config -no-lazy-grab -sep "|" -dmenu -i -p '' \
