@@ -15,16 +15,16 @@
 		#!/user/bin/env bash
 		# Add this script to your wm startup file.
 
-		DIR=$XDG_POLYBAR/cuts
+		DIR="$XDG_POLYBAR"/cuts
 
 		# Terminate already running bar instances
-		${pkgs.killall}/bin/killall -q -I -r -s SIGKILL polybar
+		killall -q -I -r -s SIGKILL polybar
 
 		# Wait until the processes have been shut down
-		while ${pkgs.toybox}/bin/pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+		while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 		# Launch the bar
-		polybar -q right -c $DIR/config.ini &
-		polybar -q left -c $DIR/config.ini &
+		polybar -q right -c "$DIR"/config.ini &
+		polybar -q left -c "$DIR"/config.ini &
 	'';
    };
 }
