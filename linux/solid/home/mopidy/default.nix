@@ -6,8 +6,8 @@
 	settings = {
 	   spotify = {
 	   	enabled = true;
-		client_id = "6603cc0f-9582-4480-9b1a-17e2ec102318";
-		client_secret = "CkFb_nvQPWWHsdv-hE9QrdtGuP2RhEUp1JPdk3PUrgE=";
+		client_id = "$CLIENT_ID";
+		client_secret = "$CLIENT_SECRET";
 		username = "$SPOTIFY_USERNAME";
 		password = "$SPOTIFY_PASSWORD";
 		bitrate = 320;
