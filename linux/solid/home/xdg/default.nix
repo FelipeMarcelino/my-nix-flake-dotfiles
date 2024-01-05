@@ -5,6 +5,8 @@
    xdg.userDirs = {
    	extraConfig = {
 	   XDG_DEV_DIR = "${config.home.homeDirectory}/Development";
+	   XDG_DOTFILES = "${config.home.homeDirectory}/Development/nix-dotfiles";
+	   XDG_POLYBAR = "${config.home.homeDirectory}/Development/nix-dotfiles/linux/solid/home/polybar";
 	};
    };
 

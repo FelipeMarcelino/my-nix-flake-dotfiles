@@ -2,12 +2,15 @@
 let 
   mod = "Mod1";
 in {
-    programs.i3status.enable = true;
-    programs.i3status-rust.enable = true;
+    programs.i3status.enable = false;
+    programs.i3status-rust.enable = false;
+    programs.i3status-rust.bars = {};
     xsession.windowManager.i3 = {
 	enable = true;
 	package = pkgs.i3-gaps;
 	config = {
+
+	   bars = [];
 	   modifier = mod;
 	   terminal = "wezterm";
 	   workspaceOutputAssign = [
@@ -109,12 +112,13 @@ in {
 	window = {
 	   titlebar = false;
 	   hideEdgeBorders = "smart";
+	   border = 4;
 	};
 	gaps = {
 	   smartGaps = true;
 	   smartBorders = "on";
-	   inner = 5;
-	   outer = 5;
+	   inner = 4;
+	   outer = 4;
 	};
 	};
     };

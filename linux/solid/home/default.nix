@@ -9,7 +9,10 @@
 	./xrandr/default.nix
 	./dunst/default.nix
 	./xdg/default.nix
+	./polybar/default.nix
+	./mopidy/default.nix
 	./password/default.nix
+	./spotifyd/default.nix
    ];
    
    home.packages = with pkgs; [
@@ -23,6 +26,12 @@
 	gparted
 	youtube-dl
 	python3
+	python311Packages.fontforge
+	networkmanager_dmenu
+	dmenu
+	lm_sensors
+	alsa-utils
+	libmpdclient
    ];
 
    programs.htop = {
@@ -51,6 +60,10 @@ include "%L"
    # Fonts
    fonts.fontconfig.enable = true;
 
+   # MPD + Mpris
+   services.mpd.enable = true;
+   services.mpdris2.enable = true;
+
    # Misc
    programs.feh.enable = true;
    services.blueman-applet.enable = true;
@@ -63,8 +76,12 @@ include "%L"
    # Pulseaudio
    services.pasystray.enable = true;
 
+   # Clipmenu
+   services.clipmenu.enable = true;
+   services.clipmenu.launcher = "rofi";
+
    home.sessionVariables = {
-	FORGIT_COPY_CMD="xclip -selection clipboardo";
+	FORGIT_COPY_CMD="xclip -selection clipboard";
 	TERMINAL="wezterm -e --always-new-process";
    };
    

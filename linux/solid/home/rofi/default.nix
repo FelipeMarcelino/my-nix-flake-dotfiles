@@ -17,7 +17,7 @@
 	  kb-mode-next = "Alt+Tab";
 	  kb-mode-previous = "Alt+ISO_Left_Tab";
 	};
-	font = "JetBrains Mono Nerd Font 10";
+	font = "PragmataPro Nerd Font 12";
 	theme = builtins.toString (pkgs.writeText "rofi-theme" ''
 * {
 background:     #1E2127FF;
