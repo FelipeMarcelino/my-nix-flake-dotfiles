@@ -5,11 +5,11 @@
 DIR="${XDG_POLYBAR}/cuts"
 
 # Terminate already running bar instances
-killall -q polybar
+killall -q -I -r -s SIGKILL polybar
 
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch the bar
-polybar -q top -c "$DIR"/config.ini &
-polybar -q bottom -c "$DIR"/config.ini &
+polybar -q left -c "$DIR"/config.ini &
+polybar -q right -c "$DIR"/config.ini &
