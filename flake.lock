@@ -108,30 +108,13 @@
         "type": "github"
       }
     },
-    "polybar-spotify": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1704345387,
-        "narHash": "sha256-Aa1W8e1v+036SIJti0TD4X3T0sUYfUN6olGJQtuYfj4=",
-        "owner": "FelipeMarcelino",
-        "repo": "polybar-spotify",
-        "rev": "c4ecdd7fb564a971009b9dbbc661f2280077f0bc",
-        "type": "github"
-      },
-      "original": {
-        "owner": "FelipeMarcelino",
-        "repo": "polybar-spotify",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "nix-darwin": "nix-darwin",
         "nixos-flake": "nixos-flake",
-        "nixpkgs": "nixpkgs",
-        "polybar-spotify": "polybar-spotify"
+        "nixpkgs": "nixpkgs"
       }
     }
   },
