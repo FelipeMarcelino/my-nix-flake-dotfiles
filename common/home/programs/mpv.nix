@@ -4,21 +4,32 @@
 	enable = true;
 	#bindings = builtins.readFile ./input_mpv.conf;
 	bindings = {
-		"WHEEL_UP" = "add volume 2";
-		"WHEEL_DOWN" = "add volume -2";
-		"UP" = "add volume 2";
-		"DOWN" = "add volume -2";
-		"AXIS_UP" = "add volume 2";
-		"AXIS_DOWN" = "add volume -2";
-		"Ctrl+RIGHT" = "seek 85 exact";
-		"Ctrl+LEFT" = "seek -85 exact";
-		"Shift+RIGHT" = "frame-step";
-		"Shift+LEFT" = "frame-back-step";
-		"H" = "seek -65";
-		"h" = "seek 65";
+		"WHEEL_UP" = "add volume 2; script-binding uosc/flash-volume";
+		"WHEEL_DOWN" = "add volume -2; script-binding uosc/flash-volume";
+		"UP" = "add volume 2; script-binding uosc/flash-volume";
+		"DOWN" = "add volume -2; script-binding uosc/flash-volume";
+		"AXIS_UP" = "add volume 2; script-binding uosc/flash-volume";
+		"AXIS_DOWN" = "add volume -2; script-binding uosc/flash-volume";
+		"w" = "add volume 2; script-binding uosc/flash-volume";
+		"s" = "add volume -2; script-binding uosc/flash-volume"; 
+		"a" = "seek  5; script-binding uosc/flash-timeline";
+		"f" = "seek -5; script-binding uosc/flash-timeline";
+		"Ctrl+RIGHT" = "seek 85 exact;  script-binding uosc/flash-timeline";
+		"Ctrl+LEFT" = "seek -85 exact;  script-binding uosc/flash-timeline";
+		"Shift+RIGHT" = "frame-step;  script-binding uosc/flash-timeline";
+		"Shift+LEFT" = "frame-back-step;  script-binding uosc/flash-timeline";
+		"space" = "cycle pause; script-binding uosc/flash-pause-indicator";
+		"H" = "seek -65;  script-binding uosc/flash-timeline ";
+		#"h" = "seek 65";
 		"v" = "cycle deband";
-		"a" = "cycle audio";
-		"s" = "cycle sub";
+		">" = "script-binding uosc/next; script-message-to uosc flash-elements top_bar,timeline";
+		"<" = "script-binding uosc/prev; script-message-to uosc flash-elements top_bar,timeline";
+		"l" = "script-binding uosc/next; script-message-to uosc flash-elements top_bar,timeline";
+		"h" = "script-binding uosc/prev; script-message-to uosc flash-elements top_bar,timeline";
+		"m" = "no-osd cycle mute; script-binding uosc/flash-volume";
+		#"s" = "cycle sub";
+		"[" =  "no-osd add speed -0.25; script-binding uosc/flash-speed";
+		"]" =  "no-osd add speed  0.25; script-binding uosc/flash-speed";
 		"i" = "cycle interpolation";
 		"t" = "script-message-to seek_to toggle-seeker";
 		"+" = "add audio-delay 0.010";
@@ -39,16 +50,32 @@
 		"kp2" = "add video-pan-y -.05";
 		"kp4" = "add video-pan-x .05";
 		"kp5" = "set video-pan-x 0; set video-pan-y 0; set video-zoom 0";
+		"TAB" = "script-binding uosc/toggle-ui";
+		"Alt+space" = "script-message-to uosc toggle-elements timeline";
+		"mbtn_right" = "script-binding uosc/menu";
+		"Alt+Tab" = "script-binding uosc/menu";
+		"/" = "script-binding uosc/playlist";
+		"Ctrl+s" = "async screenshot"; 
+		"?" = "script-binding uosc/keybinds";
+		"O" = "script-binding uosc/show-in-directory";
+		"o" = "script-binding uosc/open-file";
+		"S" = "script-binding uosc/stream-quality";
+		"r" = "script-binding uosc/shuffle";
 	};
-	package = pkgs.wrapMpv (pkgs.mpv-unwrapped.override { vapoursynthSupport = true; }) 
-	{ 
-	youtubeSupport = true; 
+	#package = pkgs.wrapMpv (pkgs.mpv-unwrapped.override { vapoursynthSupport = true; }) 
+	#{ 
+	#youtubeSupport = true; 
+	#scripts = with pkgs.mpvScripts; [mpris uosc seekTo cutter autoload autocrop thumbfast quality-menu mpv-playlistmanager blacklistExtensions ];
+	#};
+	package = pkgs.mpv;
+
 	scripts = with pkgs.mpvScripts; [mpris uosc seekTo cutter autoload autocrop thumbfast quality-menu mpv-playlistmanager blacklistExtensions ];
-	};
 	config = {
 		gpu-api="vulkan";
 		hr-seek-framedrop="no";
-		border= "no";				
+		border = "no";				
+		loop-file="inf";
+		loop-playlist="inf";
 		fullscreen = "yes";
 		force-window = "yes";
 		drag-and-drop = "auto";
@@ -65,7 +92,7 @@
 		screenshot-tag-colorspace="yes";
 		screenshot-high-bit-depth="yes";
 		osc="no";
-		osd-bar="yes";
+		osd-bar="no";
 		osd-font="Pragmata Pro Nerd Font";
 		osd-font-size=14;
 		osd-color="#CCFFFFFF";
@@ -96,8 +123,8 @@
 		audio-stream-silence=true;
 		audio-file-auto="fuzzy";
 		audio-pitch-correction="yes";
-		alang="en-US,pt-BR,jpn,jp,eng,en,enUS,de,ger";
-		slang="en-US,en,pt-BR,eng,und,de,ger,jp,jap";
+		alang="en,pt-br,ja,ja-jp,es,sw";
+		#slang = "en,es,sw";
 		};
 	   defaultProfiles = [ "high-quality" ];
 	   profiles = {
