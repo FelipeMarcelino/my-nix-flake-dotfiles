@@ -20,6 +20,8 @@
 		# Wait until the processes have been shut down
 		# while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
+		sleep 1
+
 		# Launch the bar
 		polybar -q right -c "$DIR/config.ini" &
 		polybar -q left -c "$DIR/config.ini" &
