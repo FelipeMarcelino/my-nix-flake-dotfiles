@@ -3,7 +3,7 @@
 # Color files
 PFILE="/home/felipemarcelino/Development/nix-dotfiles/linux/solid/home/polybar/cuts/colors.ini"
 RFILE="/home/felipemarcelino/Development/nix-dotfiles/linux/solid/home/polybar/cuts/scripts/rofi/colors.rasi"
-WFILE="$HOME/.cache/wal/colors.sh"
+WFILE="/home/felipemarcelino/.cache/wal/colors.sh"
 
 # Get colors
 pywal_get() {
