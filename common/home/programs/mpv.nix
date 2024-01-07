@@ -1,6 +1,6 @@
 { config, pkgs, lib,  ...}:
 let 
-   mpvGalleryView = pkgs.callPackage ./mpv_plugins/mpv_gallery_view.nix {};
+   mpvGalleryView = lib.recurseIntoAttrs (pkgs.callPackage ./mpv_plugins/mpv_gallery_view.nix {}); 
 in
 {
    programs.mpv = {
@@ -64,11 +64,11 @@ in
 		"o" = "script-binding uosc/open-file";
 		"S" = "script-binding uosc/stream-quality";
 		"r" = "script-binding uosc/shuffle";
-		"g" = "script-message contact-sheet-close; script-message playlist-view-toggle";
-		"c" = "script-message playlist-view-close; script-message contact-sheet-toggle";
+		"g" = "script-message-to contact-sheet-close; script-message-to playlist-view-toggle";
+		"c" = "script-message-to playlist-view-close; script-message-to contact-sheet-toggle";
 	};
 	package = pkgs.mpv;
-	scripts = with pkgs.mpvScripts; [mpris uosc seekTo cutter autoload autocrop thumbfast quality-menu mpv-playlistmanager blacklistExtensions ] ++ [mpvGalleryView] ;
+	scripts = with pkgs.mpvScripts; [mpris uosc seekTo cutter autoload autocrop thumbfast quality-menu mpv-playlistmanager blacklistExtensions mpvGalleryView];
 	config = {
 		gpu-api="vulkan";
 		hr-seek-framedrop="no";
@@ -92,7 +92,7 @@ in
 		screenshot-high-bit-depth="yes";
 		osc="no";
 		osd-bar="no";
-		osd-font="Pragmata Pro Nerd Font";
+		osd-font="PragmataPro Nerd Font";
 		osd-font-size=14;
 		osd-color="#CCFFFFFF";
 		osd-border-color="#DD322640";
@@ -119,6 +119,9 @@ in
 		sub-shadow-color="0.0/0.0/0.0/0.25";
 		sub-shadow-offset=0;
 		volume-max=150;
+		cache="yes";
+		demuxer-max-bytes="123400KiB";
+		demuxer-readahead-secs=20;
 		audio-stream-silence=true;
 		audio-file-auto="fuzzy";
 		audio-pitch-correction="yes";

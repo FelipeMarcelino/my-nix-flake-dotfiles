@@ -2,8 +2,10 @@
   lib,
   stdenvNoCC,
   fetchFromGitHub,
+  ffmpeg,
 }:
-stdenvNoCC.mkDerivation {
+
+stdenvNoCC.mkDerivation{
   pname = "mpv-gallery-view";
   version = "unstable";
 
@@ -20,12 +22,13 @@ stdenvNoCC.mkDerivation {
     runHook preInstall
     mkdir -p $out/share/mpv/scripts
     mkdir -p $out/share/mpv/script-modules
-    cp -rf $src/scripts/* $out/share/mpv/scripts/
+    cp $src/scripts/* $out/share/mpv/scripts
     cp $src/script-modules/gallery.lua $out/share/mpv/script-modules/gallery.lua
     runHook postInstall
   '';
 
-  passthru.scriptName = "gallery.lua";
+  passthru.scriptName = "playlist-view.lua";
+
 
   meta = with lib; {
     description = "Playlist view and contact sheet scripts for mpv";
