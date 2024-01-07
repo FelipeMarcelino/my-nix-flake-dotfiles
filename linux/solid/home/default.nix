@@ -13,6 +13,8 @@
 	./mopidy/default.nix
 	./password/default.nix
 	./spotifyd/default.nix
+	./gallerydl/default.nix
+	./ytdlp/default.nix
    ];
    
    home.packages = with pkgs; [
@@ -32,6 +34,7 @@
 	lm_sensors
 	alsa-utils
 	libmpdclient
+	instaloader
    ];
 
    programs.htop = {
