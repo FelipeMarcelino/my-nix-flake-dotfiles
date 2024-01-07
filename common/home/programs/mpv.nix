@@ -29,10 +29,10 @@ in
 		"H" = "seek -65;  script-binding uosc/flash-timeline ";
 		#"h" = "seek 65";
 		"v" = "cycle deband";
-		">" = "script-binding uosc/next; script-message-to uosc flash-elements top_bar,timeline";
-		"<" = "script-binding uosc/prev; script-message-to uosc flash-elements top_bar,timeline";
-		"l" = "script-binding uosc/next; script-message-to uosc flash-elements top_bar,timeline";
-		"h" = "script-binding uosc/prev; script-message-to uosc flash-elements top_bar,timeline";
+		">" = "script-binding uosc/next";
+		"<" = "script-binding uosc/prev";
+		"l" = "script-binding uosc/next";
+		"h" = "script-binding uosc/prev";
 		"m" = "no-osd cycle mute; script-binding uosc/flash-volume";
 		#"s" = "cycle sub";
 		"[" =  "no-osd add speed -0.25; script-binding uosc/flash-speed";
@@ -89,7 +89,7 @@ in
 		msg-module="yes";
 		autofit="85%x85%";
 		cursor-autohide=100;
-		screenshot-template="%/Pictures/Screenshot-%F-T%wH.%wM.%wS.%wT-F%{estimated-frame-number}";
+		screenshot-template="/home/felipemarcelino/Pictures/screenshot-%F-T%wH.%wM.%wS.%wT-F%{estimated-frame-number}";
 		screenshot-format="png";
 		screenshot-png-compression=4;
 		screenshot-tag-colorspace="yes";
@@ -126,7 +126,6 @@ in
 		cache="yes";
 		demuxer-max-bytes="123400KiB";
 		demuxer-readahead-secs=20;
-		audio-stream-silence=true;
 		audio-file-auto="fuzzy";
 		audio-pitch-correction="yes";
 		alang="en,pt-br,ja,ja-jp,es,sw";

@@ -27,7 +27,7 @@ stdenvNoCC.mkDerivation{
     runHook postInstall
   '';
 
-  passthru.scriptName = "contact-sheet";
+  passthru.scriptName = "contact-sheet.lua";
 
   propagatedBuildInputs = [ffmpeg];
 
