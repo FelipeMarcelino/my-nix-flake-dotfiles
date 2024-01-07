@@ -1,9 +1,9 @@
 { config, pkgs, ...}:
 {
-   programs.gallery-dl = {
+   programs.yt-dlp = {
 	enable = true;
 	settings = {
-	  extract.base-directory = ''builtins.getEnv("XDG_YT_DLP")'';
+	  #extract.base-directory = ''builtins.getEnv("XDG_YT_DLP")'';
 	};
    };
 }
