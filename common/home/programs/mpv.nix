@@ -66,7 +66,7 @@ in
 		"r" = "script-binding uosc/shuffle";
 	};
 	package = pkgs.mpv;
-	scripts = with pkgs.mpvScripts; [mpris uosc seekTo cutter autoload autocrop thumbfast quality-menu mpv-playlistmanager blacklistExtensions ] + [mpvGalleryView] ;
+	scripts = with pkgs.mpvScripts; [mpris uosc seekTo cutter autoload autocrop thumbfast quality-menu mpv-playlistmanager blacklistExtensions ] ++ [mpvGalleryView] ;
 	config = {
 		gpu-api="vulkan";
 		hr-seek-framedrop="no";

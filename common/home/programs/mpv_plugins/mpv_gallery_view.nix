@@ -11,7 +11,7 @@ stdenvNoCC.mkDerivation {
     owner = "occivink";
     repo = "mpv-gallery-view";
     rev = "master";
-    sha256 = "1n73p1v6968hygi8kvhyi687n4ip75b9i3gq65ll9264w7kg2b6q";
+    sha256 = "Ge8opQfATpOsT7jk6vPRKOPwZ/sp17rXg1D/vajh1+4=";
   };
 
   dontBuild = true;
@@ -21,7 +21,7 @@ stdenvNoCC.mkDerivation {
     mkdir -p $out/share/mpv/scripts
     mkdir -p $out/share/mpv/script-modules
     cp -rf $src/scripts/* $out/share/mpv/scripts/
-    cp $src/script-modules/gallery.lua %out/share/mpv/script-modules/gallery.lua
+    cp $src/script-modules/gallery.lua $out/share/mpv/script-modules/gallery.lua
     runHook postInstall
   '';
 
