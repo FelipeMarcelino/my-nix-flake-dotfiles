@@ -1,4 +1,7 @@
 { config, pkgs, lib,  ...}:
+let 
+   mpvGalleryView = pkgs.callPackage ./mpv_plugins/mpv_gallery_view.nix {};
+in
 {
    programs.mpv = {
 	enable = true;
@@ -12,8 +15,8 @@
 		"AXIS_DOWN" = "add volume -2; script-binding uosc/flash-volume";
 		"w" = "add volume 2; script-binding uosc/flash-volume";
 		"s" = "add volume -2; script-binding uosc/flash-volume"; 
-		"a" = "seek  5; script-binding uosc/flash-timeline";
-		"f" = "seek -5; script-binding uosc/flash-timeline";
+		"a" = "seek -5; script-binding uosc/flash-timeline";
+		"f" = "seek 5; script-binding uosc/flash-timeline";
 		"Ctrl+RIGHT" = "seek 85 exact;  script-binding uosc/flash-timeline";
 		"Ctrl+LEFT" = "seek -85 exact;  script-binding uosc/flash-timeline";
 		"Shift+RIGHT" = "frame-step;  script-binding uosc/flash-timeline";
@@ -40,7 +43,7 @@
 		"F" = "script-binding quality_menu/video_formats_toggle";
 		"Alt+f" = "script-binding quality_menu/audio_formats_toggle";
 		"Ctrl+f" = "script-binding quality_menu/reload";
-		"Meta+v" = "script-message-to Mac_Integration OpenFromClipboard";
+		#"Meta+v" = "script-message-to Mac_Integration OpenFromClipboard";
 		#"TAB" = "script-message-to Mac_Integration ShowFinder";
 		#"Ctrl+f" = "script-message-to Mac_Integration ShowInFinder";
 		#"-" = "add video-zoom -.25";
@@ -51,7 +54,7 @@
 		"kp4" = "add video-pan-x .05";
 		"kp5" = "set video-pan-x 0; set video-pan-y 0; set video-zoom 0";
 		"TAB" = "script-binding uosc/toggle-ui";
-		"Alt+space" = "script-message-to uosc toggle-elements timeline";
+		"Alt+space" = "script-message-to uosc toggle-elements top_bar,timeline";
 		"mbtn_right" = "script-binding uosc/menu";
 		"Alt+Tab" = "script-binding uosc/menu";
 		"/" = "script-binding uosc/playlist";
@@ -63,7 +66,7 @@
 		"r" = "script-binding uosc/shuffle";
 	};
 	package = pkgs.mpv;
-	scripts = with pkgs.mpvScripts; [mpris uosc seekTo cutter autoload autocrop thumbfast quality-menu mpv-playlistmanager blacklistExtensions ];
+	scripts = with pkgs.mpvScripts; [mpris uosc seekTo cutter autoload autocrop thumbfast quality-menu mpv-playlistmanager blacklistExtensions ] + [mpvGalleryView] ;
 	config = {
 		gpu-api="vulkan";
 		hr-seek-framedrop="no";
