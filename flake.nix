@@ -10,6 +10,8 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixos-flake.url = "github:srid/nixos-flake";
+    disko.url = "github:nix-community/disko";
+    disko.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs@{ self, ... }:
@@ -31,6 +33,7 @@
               imports = [
                 self.nixosModules.common # See below for "nixosModules"!
                 self.nixosModules.linux
+		inputs.disko.nixosModules.disko
                 # Your home-manager configuration
                 self.nixosModules.home-manager
                 {
