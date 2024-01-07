@@ -32,6 +32,7 @@
 	lm_sensors
 	alsa-utils
 	libmpdclient
+	instaloader
    ];
 
    programs.htop = {

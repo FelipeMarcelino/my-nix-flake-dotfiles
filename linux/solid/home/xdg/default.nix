@@ -7,6 +7,9 @@
 	   XDG_DEV_DIR = "${config.home.homeDirectory}/Development";
 	   XDG_DOTFILES = "${config.home.homeDirectory}/Development/nix-dotfiles";
 	   XDG_POLYBAR = "${config.home.homeDirectory}/Development/nix-dotfiles/linux/solid/home/polybar";
+	   XDG_GALLERY_DL  = "${config.home.homeDirectory}/Data/Gallery";
+	   XDG_YT_DLP = "${config.home.homeDirectory}/Data/Gallery";
+	   XDG_INSTALOADER = "${config.home.homeDirectory}/Data/Gallery";
 	};
    };
 
