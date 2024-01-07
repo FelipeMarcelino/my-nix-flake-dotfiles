@@ -13,6 +13,7 @@
 	./mopidy/default.nix
 	./password/default.nix
 	./spotifyd/default.nix
+	./gallerydl/default.nix
    ];
    
    home.packages = with pkgs; [
