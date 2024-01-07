@@ -64,6 +64,8 @@ in
 		"o" = "script-binding uosc/open-file";
 		"S" = "script-binding uosc/stream-quality";
 		"r" = "script-binding uosc/shuffle";
+		"g" = "script-message contact-sheet-close; script-message playlist-view-toggle";
+		"c" = "script-message playlist-view-close; script-message contact-sheet-toggle";
 	};
 	package = pkgs.mpv;
 	scripts = with pkgs.mpvScripts; [mpris uosc seekTo cutter autoload autocrop thumbfast quality-menu mpv-playlistmanager blacklistExtensions ] ++ [mpvGalleryView] ;
@@ -157,5 +159,10 @@ in
 
    };
 
-   home.file."${config.home.homeDirectory}/.config/mpv/script-opts/uosc.conf".source= ./uosc.conf;
+   home.file."${config.home.homeDirectory}/.config/mpv/script-opts/uosc.conf".source= ./mpv_plugins/uosc.conf;
+   home.file."${config.home.homeDirectory}/.config/mpv/script-opts/contact_sheet.conf".source= ./mpv_plugins/contact_sheet.conf;
+   home.file."${config.home.homeDirectory}/.config/mpv/script-opts/gallery_worker.conf".source= ./mpv_plugins/gallery_worker.conf;
+   home.file."${config.home.homeDirectory}/.config/mpv/script-opts/playlist_view.conf".source= ./mpv_plugins/playlist_view.conf;
+
+
 }
