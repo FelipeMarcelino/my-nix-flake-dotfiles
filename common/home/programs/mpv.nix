@@ -1,8 +1,12 @@
 { config, pkgs, lib,  ...}:
 let 
-   mpvGalleryView = lib.recurseIntoAttrs (pkgs.callPackage ./mpv_plugins/mpv_gallery_view.nix {}); 
+   mpvGalleryViewPlaylist = lib.recurseIntoAttrs (pkgs.callPackage ./mpv_plugins/mpv_gallery_view_playlist.nix {}); 
+   mpvGalleryViewSheet = lib.recurseIntoAttrs (pkgs.callPackage ./mpv_plugins/mpv_gallery_view_sheet.nix {}); 
 in
 {
+
+   home.packages = with pkgs; [ ffmpeg ];
+
    programs.mpv = {
 	enable = true;
 	#bindings = builtins.readFile ./input_mpv.conf;
@@ -64,11 +68,11 @@ in
 		"o" = "script-binding uosc/open-file";
 		"S" = "script-binding uosc/stream-quality";
 		"r" = "script-binding uosc/shuffle";
-		"g" = "script-message-to contact-sheet-close; script-message-to playlist-view-toggle";
-		"c" = "script-message-to playlist-view-close; script-message-to contact-sheet-toggle";
+		"g" = "script-message contact-sheet-close; script-message playlist-view-toggle";
+		"c" = "script-message playlist-view-close; script-message contact-sheet-toggle";
 	};
 	package = pkgs.mpv;
-	scripts = with pkgs.mpvScripts; [mpris uosc seekTo cutter autoload autocrop thumbfast quality-menu mpv-playlistmanager blacklistExtensions mpvGalleryView];
+	scripts = with pkgs.mpvScripts; [mpris uosc seekTo cutter autoload autocrop thumbfast quality-menu mpv-playlistmanager blacklistExtensions mpvGalleryViewPlaylist mpvGalleryViewSheet];
 	config = {
 		gpu-api="vulkan";
 		hr-seek-framedrop="no";
@@ -166,6 +170,7 @@ in
    home.file."${config.home.homeDirectory}/.config/mpv/script-opts/contact_sheet.conf".source= ./mpv_plugins/contact_sheet.conf;
    home.file."${config.home.homeDirectory}/.config/mpv/script-opts/gallery_worker.conf".source= ./mpv_plugins/gallery_worker.conf;
    home.file."${config.home.homeDirectory}/.config/mpv/script-opts/playlist_view.conf".source= ./mpv_plugins/playlist_view.conf;
+   home.file."${config.home.homeDirectory}/.config/mpv/script-modules/gallery.lua".source = "${mpvGalleryViewSheet}/share/mpv/script-modules/gallery.lua";
 
 
 }

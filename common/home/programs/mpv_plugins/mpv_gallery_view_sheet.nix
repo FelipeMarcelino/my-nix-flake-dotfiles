@@ -6,7 +6,7 @@
 }:
 
 stdenvNoCC.mkDerivation{
-  pname = "mpv-gallery-view";
+  pname = "mpv-gallery-view-contact-sheet";
   version = "unstable";
 
   src = fetchFromGitHub {
@@ -27,7 +27,7 @@ stdenvNoCC.mkDerivation{
     runHook postInstall
   '';
 
-  passthru.scriptName = "playlist-view.lua";
+  passthru.scriptName = "contact-sheet";
 
   propagatedBuildInputs = [ffmpeg];
 

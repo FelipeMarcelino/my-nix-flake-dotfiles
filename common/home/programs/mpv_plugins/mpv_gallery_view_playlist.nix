@@ -6,7 +6,7 @@
 }:
 
 stdenvNoCC.mkDerivation{
-  pname = "mpv-gallery-view";
+  pname = "mpv-gallery-view-playlist";
   version = "unstable";
 
   src = fetchFromGitHub {
