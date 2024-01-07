@@ -160,5 +160,5 @@
 
    };
 
-   home.file."${config.home.homeDirectory}/.config/mpv/script-opts/uosc.conf".source= builtins.readFile ./uosc.conf;
+   home.file."${config.home.homeDirectory}/.config/mpv/script-opts/uosc.conf".source= ./uosc.conf;
 }
