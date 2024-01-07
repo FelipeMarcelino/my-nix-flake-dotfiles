@@ -159,4 +159,6 @@
 	};
 
    };
+
+   home.file."${config.home.homeDirectory}.config/mpv/script-opts/uosc.conf".text = builtins.readFile ./uosc.conf;
 }
