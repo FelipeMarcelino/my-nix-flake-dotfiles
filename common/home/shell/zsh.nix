@@ -56,6 +56,8 @@ bindkey '^X' run_rfv
    cat = "bat --paging=never";
    du = "dust";
    df = "duf";
+   x = "exa";
+   mpv = "mpv --glsl-shaders=/home/felipemarcelino/Development/mpv/mpv-settings/shaders/CfL_Prediction.glsl:/home/felipemarcelino/Development/mpv/mpv-settings/shaders/ravu-zoom-ar-r3-rgb.hook";
   };
   programs.zsh.localVariables = {
     KEYTIMEOUT = 15;	
