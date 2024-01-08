@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, disko, ... }:
 
 {
   imports =
@@ -20,6 +20,11 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+
+  # Fonts
+  fonts.fontDir.enable = true;
+  fonts.enableDefaultPackages = true;
+  fonts.fontconfig.enable = true;
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -42,17 +47,21 @@
     LC_TIME = "pt_BR.UTF-8";
   };
 
-  # Configure keymap in X11
+  # Xserver
   services.xserver = {
-    layout = "us";
-    xkbVariant = "intl";
     enable = true;
     displayManager.defaultSession = "none+i3";
     desktopManager.xterm.enable = false;
     displayManager.lightdm.enable = false;
     displayManager.gdm.enable = true;
     windowManager.i3.enable = true;
+    windowManager.i3.extraPackages = with pkgs; [ i3lock ];
   };
+
+  # Input
+  i18n.inputMethod.enabled = "ibus";
+  i18n.inputMethod.ibus.engines = with pkgs.ibus-engines; [ table table-others ];
+  services.xserver.desktopManager.runXdgAutostartIfNone = true;
 
   # Configure console keymap
   console.keyMap = "us-acentos";
@@ -75,9 +84,12 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    solaar
     xclip
     vim 
     wget
+    xorg.xmodmap
+    xorg.xev
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -99,9 +111,24 @@
   # Nvidia
   services.xserver.videoDrivers = [ "nvidia" ];
 
+  # Terminal info
+  environment.enableAllTerminfo = true;
+  security.sudo.keepTerminfo = true;
+
   # Bluetooth
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
+
+  # Logitech
+  hardware.logitech.wireless.enable = true;
+  hardware.logitech.wireless.enableGraphical = true;
+
+  #
+  boot.swraid.enable = true;
+  #boot.swraid.mdadmConf = "
+	#ARRAY /dev/md/imsm0 metadata=imsm UUID=d2877d64:a51a52ae:f84d8929:e0e32841
+	#ARRAY /dev/md/Raid0Kingston_0 container=/dev/md/imsm0 member=0 UUID=74a34357:6489485e:5d806e93:9ef5917a
+  #";
 
   # Pipewire
   security.rtkit.enable = true;
