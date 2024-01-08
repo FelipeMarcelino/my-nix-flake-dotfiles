@@ -8,7 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./disko.nix
     ];
 
   # Bootloader.
@@ -126,6 +125,10 @@
 
   #
   boot.swraid.enable = true;
+  #boot.swraid.mdadmConf = "
+	#ARRAY /dev/md/imsm0 metadata=imsm UUID=d2877d64:a51a52ae:f84d8929:e0e32841
+	#ARRAY /dev/md/Raid0Kingston_0 container=/dev/md/imsm0 member=0 UUID=74a34357:6489485e:5d806e93:9ef5917a
+  #";
 
   # Pipewire
   security.rtkit.enable = true;
