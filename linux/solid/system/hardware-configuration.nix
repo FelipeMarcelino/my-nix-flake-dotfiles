@@ -23,6 +23,12 @@
       fsType = "vfat";
     };
 
+  fileSystems."/home/felipemarcelino/Data" =
+    { device = "/dev/disk/by-label/data";
+      fsType = "ext4";
+      options = [ "uid=1000" "gid=100" "umask=022" ];
+    };
+
   swapDevices =
     [ { device = "/dev/disk/by-uuid/8f19ac0e-df47-4411-a3b8-06cfa38ef3c3"; }
     ];

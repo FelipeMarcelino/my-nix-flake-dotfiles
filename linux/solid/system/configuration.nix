@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, disko, ... }:
 
 {
   imports =
@@ -122,6 +122,13 @@
   # Logitech
   hardware.logitech.wireless.enable = true;
   hardware.logitech.wireless.enableGraphical = true;
+
+  #
+  boot.swraid.enable = true;
+  #boot.swraid.mdadmConf = "
+	#ARRAY /dev/md/imsm0 metadata=imsm UUID=d2877d64:a51a52ae:f84d8929:e0e32841
+	#ARRAY /dev/md/Raid0Kingston_0 container=/dev/md/imsm0 member=0 UUID=74a34357:6489485e:5d806e93:9ef5917a
+  #";
 
   # Pipewire
   security.rtkit.enable = true;
